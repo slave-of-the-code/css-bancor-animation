@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+console.log('hola react!');
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// var nunca mas
+let variableQueSeEdita = '22';
+const soloLectura = 'nunca me podras editar';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+console.log(variableQueSeEdita);
+console.log(soloLectura);
+
+const miObjeto = {
+  prop1: 22,
+  prop2: true,
+  prop3: 'hola'
+};
+console.log(miObjeto);
+
+miObjeto.prop2 = false;
+console.log(miObjeto);
+
+miObjeto.prop4 = 'puedo agregar propiedades';
+console.log(miObjeto)
+
+// miObjeto = {
+//   prop5: 'se rompe!'
+// }
