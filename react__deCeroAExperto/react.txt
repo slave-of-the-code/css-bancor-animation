@@ -1,1 +1,10 @@
 > npx create-react-app nombre-de-mi-app
+
+
+"eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "semi":["error","always"],
+      "quotes":["error","double"]
+    }
+  }
