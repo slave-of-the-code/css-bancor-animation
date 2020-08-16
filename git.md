@@ -73,6 +73,7 @@ git reset <nombre/path del archivo a quitar>
 
 ```md
 git checkout <nombre/path del archivo a quitar>
+git checkout -- . <rollback all changes of all files>
 ```
 
 ---
