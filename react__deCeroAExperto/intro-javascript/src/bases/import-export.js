@@ -22,12 +22,7 @@ const tasks = [
   }
 ];
 
-const otherObject = {
-  id: 1,
-  name: 'Pepe'
-};
-
-export { tasks as default, otherObject };
+export default tasks;
 
 // You can do it this
 /*
@@ -38,7 +33,7 @@ import Tasks from './data/tasks'
 
 ===========================================
 
-or...in the same file
+also...in the same file
 
 export const otherObject = { id: 1, name: 'Pepe'}
 
@@ -49,22 +44,13 @@ import Tasks, { otherObject } from './data/tasks'
 ===========================================
 
 or
-const tasks = [...]
+
 export {
-  tasks as default,
+  as default : ['1','2','3'],
   otherObject
 }
 
 in the file...
 
 import Tasks, { otherObject } from './data/tasks'
-*/
-
-/*
-This in index.js file
-------------------------
-import tasks, { otherObject } from './data/tasks';
-
-console.log(tasks);
-console.log(otherObject);
 */
