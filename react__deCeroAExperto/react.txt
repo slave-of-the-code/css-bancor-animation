@@ -1,6 +1,0 @@
-# REACT
-#### Crear una nueva app
-```
-> npx create-react-app nombre-de-mi-app
-```
-[more information about this command...](https://create-react-app.dev/)
