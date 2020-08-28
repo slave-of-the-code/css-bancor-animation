@@ -1,10 +1,6 @@
+# REACT
+#### Crear una nueva app
+```
 > npx create-react-app nombre-de-mi-app
-
-
-"eslintConfig": {
-    "extends": "react-app",
-    "rules": {
-      "semi":["error","always"],
-      "quotes":["error","double"]
-    }
-  }
+```
+[more information about this command...](https://create-react-app.dev/)
