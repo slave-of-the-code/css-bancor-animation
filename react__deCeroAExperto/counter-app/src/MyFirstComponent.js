@@ -27,4 +27,10 @@ MyFirstComponent.propTypes = {
   date: PropTypes.string
 };
 
+MyFirstComponent.defaultProps = {
+  title: 'title',
+  userName: 'userName',
+  date: 'date'
+};
+
 export default MyFirstComponent;
