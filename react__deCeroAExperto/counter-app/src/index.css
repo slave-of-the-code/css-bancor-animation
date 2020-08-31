@@ -1,7 +1,14 @@
+:root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-white-7-5: rgba(255, 255, 255, 0.75);
+  --color-white-2-5: rgba(255, 255, 255, 0.25);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   font-size: 20px;

@@ -1,15 +1,30 @@
 import React from 'react';
-import './MyfirstComponent.css';
-// const HelloReact = () => {
-//   return <h1>hello react!</h1>;
-// };
+import PropTypes from 'prop-types';
 
-const MyFirstComponent = () => {
+// Styles
+import './MyfirstComponent.css';
+
+const MyFirstComponent = ({ title, userName, date }) => {
   return (
-    <header>
-      <h1>My first component</h1>
-    </header>
+    <>
+      <header>
+        <h1>{title}</h1>
+        <div>
+          <h4>{userName}</h4>
+          <small>
+            <em>{date}</em>
+          </small>
+        </div>
+      </header>
+      <hr />
+    </>
   );
+};
+
+MyFirstComponent.propTypes = {
+  title: PropTypes.string.isRequired,
+  userName: PropTypes.string,
+  date: PropTypes.string
 };
 
 export default MyFirstComponent;

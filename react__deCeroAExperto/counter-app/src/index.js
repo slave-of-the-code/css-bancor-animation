@@ -23,7 +23,12 @@ const divRoot = document.querySelector('#root');
 
 ReactDOM.render(
   <>
-    <MyFirstComponent />
+    <MyFirstComponent
+      title="My tasks"
+      userName="Gustavo Lopez"
+      date="Sunday, August 30, 2020"
+      date-year={2020}
+    />
   </>,
   divRoot
 );
