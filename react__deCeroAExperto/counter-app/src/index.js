@@ -16,6 +16,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MyFirstComponent from './MyFirstComponent';
 import GridTasks from './GridTasks';
+import CounterApp from './CounterApp';
+
 // Styles
 import './index.css';
 
@@ -29,7 +31,8 @@ ReactDOM.render(
       date="Sunday, August 30, 2020"
       date-year={2020}
     />
-    <GridTasks title="Tasks" />
+    <CounterApp />
+    {/* <GridTasks title="Tasks" /> */}
   </>,
   divRoot
 );
