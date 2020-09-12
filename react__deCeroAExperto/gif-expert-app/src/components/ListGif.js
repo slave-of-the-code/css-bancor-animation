@@ -1,42 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const ListGif = () => {
-  const [list, setList] = useState([
-    {
-      name: 'Gustavo Lopez',
-      age: 40
-    },
-    {
-      name: 'Fabiana Rivero',
-      age: 36
-    },
-    {
-      name: 'Lourdes Lopez',
-      age: 16
-    }
-  ]);
-
-  const handleAddButtonClick = () => {
-    setList([
-      ...list,
-      {
-        name: 'Milena Lopez',
-        age: 13
-      }
-    ]);
-    // console.log(list);
-  };
-
+const ListGif = ({ list }) => {
   return (
     <>
-      <button onClick={handleAddButtonClick}>add</button>
       <ul>
         {list.map((item, i) => {
           return (
             <li key={i}>
               <p>
-                <small>{item.name}</small>
-                <strong>{item.age}</strong>
+                <small>{item}</small>
               </p>
             </li>
           );
@@ -46,4 +19,11 @@ const ListGif = () => {
   );
 };
 
-export default ListGif;
+ListGif.propTypes = {
+  list: PropTypes.array
+};
+ListGif.defaultProps = {
+  list: ['Gustavo Lopez', 'Fabiana Rivero', 'Lourdes Lopez']
+};
+
+export { ListGif as default };

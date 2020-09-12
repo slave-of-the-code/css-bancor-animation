@@ -20,7 +20,7 @@ form {
 }
 
 input[type='text'] {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem 0;
   width: 100%;
   border-style: none;
@@ -36,4 +36,13 @@ ul {
 
 hr {
   margin: 0.5rem 0;
+}
+
+button {
+  outline: none;
+  padding: 0.5rem;
+  min-width: 100px;
+  border: rgba(128, 128, 128, 0.25) solid 1px;
+  cursor: pointer;
+  /* letter-spacing: 2.5px; */
 }
