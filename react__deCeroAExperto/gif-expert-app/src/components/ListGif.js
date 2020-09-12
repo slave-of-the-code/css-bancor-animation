@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ListGif = () => {
-  const list = [
+  const [list, setList] = useState([
     {
       name: 'Gustavo Lopez',
       age: 40
@@ -14,10 +14,22 @@ const ListGif = () => {
       name: 'Lourdes Lopez',
       age: 16
     }
-  ];
+  ]);
+
+  const handleAddButtonClick = () => {
+    setList([
+      ...list,
+      {
+        name: 'Milena Lopez',
+        age: 13
+      }
+    ]);
+    // console.log(list);
+  };
 
   return (
     <>
+      <button onClick={handleAddButtonClick}>add</button>
       <ul>
         {list.map((item, i) => {
           return (
