@@ -16,6 +16,15 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "prettier": {
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "printWidth": 80,
+    "arrowParens": "always"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
