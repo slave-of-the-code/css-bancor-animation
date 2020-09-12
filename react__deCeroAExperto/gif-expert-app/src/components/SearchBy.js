@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Add = ({ addNewItem }) => {
+const SearchBy = ({ getGifData }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
@@ -12,7 +12,7 @@ const Add = ({ addNewItem }) => {
     e.preventDefault();
 
     if (inputValue.trim().length > 0) {
-      addNewItem(inputValue);
+      getGifData(inputValue);
       setInputValue('');
     }
   };
@@ -28,9 +28,9 @@ const Add = ({ addNewItem }) => {
   );
 };
 
-Add.propTypes = {
-  addNewItem: PropTypes.func,
+SearchBy.propTypes = {
+  getGifData: PropTypes.func,
   list: PropTypes.array
 };
 
-export default Add;
+export default SearchBy;
