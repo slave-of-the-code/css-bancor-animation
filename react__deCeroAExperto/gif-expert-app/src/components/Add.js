@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const Add = () => {
-  const [inputValue, setInputValue] = useState('joojo');
+const Add = ({ addNewItem }) => {
+  const [inputValue, setInputValue] = useState('');
+
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log('Submit from Form');
+
+    if (inputValue.trim().length > 0) {
+      addNewItem(inputValue);
+      setInputValue('');
+    }
   };
+
   return (
     <form onSubmit={handleFormSubmit}>
       <input
@@ -18,6 +26,11 @@ const Add = () => {
       ></input>
     </form>
   );
+};
+
+Add.propTypes = {
+  addNewItem: PropTypes.func,
+  list: PropTypes.array
 };
 
 export default Add;
