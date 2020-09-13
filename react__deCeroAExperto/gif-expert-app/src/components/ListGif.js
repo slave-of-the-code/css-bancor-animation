@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListGif = ({ list, query }) => {
-  list = list[0] || [];
   return (
     <>
       <h3>{query}</h3>
+      {list.length === 0 && <p>loading...</p>}
       <ul className="gif-grid">
         {list.map((gif, index) => (
           <li key={index} className="gif-card" title={gif.title}>
@@ -22,11 +22,13 @@ const ListGif = ({ list, query }) => {
 
 ListGif.propTypes = {
   list: PropTypes.array,
-  query: PropTypes.string
+  query: PropTypes.string,
+  loading: PropTypes.bool
 };
 ListGif.defaultProps = {
   list: [{ id: 1, title: 'title', url: 'url image' }],
-  query: ''
+  query: '',
+  loading: false
 };
 
 export { ListGif as default };
