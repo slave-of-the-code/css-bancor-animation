@@ -2,27 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListGif = ({ list }) => {
+  list = list[0] || [];
   return (
     <>
       <ul>
-        {list.map((item, index) => {
-          const rowLen = item.length;
-          return item.map((gif, i) => (
-            <>
-              <li key={gif.id}>
-                <div>
-                  <small>{gif.title}</small>
-                  <img src={gif.url} alt={gif.title}></img>
-                </div>
-              </li>
-              {rowLen === i + 1 && (
-                <li key={i + 1}>
-                  <hr />
-                </li>
-              )}
-            </>
-          ));
-        })}
+        {list.map((gif, index) => (
+          <li key={index}>
+            <div>
+              <small>{gif.title}</small>
+              <img src={gif.url} alt={gif.title}></img>
+            </div>
+          </li>
+        ))}
       </ul>
     </>
   );

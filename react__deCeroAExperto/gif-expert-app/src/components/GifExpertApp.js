@@ -28,7 +28,7 @@ export const GifExpertApp = () => {
 
   const getGifData = async (query) => {
     const gif = await getGif(query);
-    setList([...list, gif]);
+    setList([gif]);
   };
 
   return (
