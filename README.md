@@ -1,9 +1,7 @@
-README.md file exampple
-
 # CSS | Bancor animation
 
 ##### text "Bancor" with a short animation applying just CSS code
 
 ### Published
 
-[github-pages](https://www.udemy.com/)
+[GitHub Pages](https://slave-of-the-code.github.io/css-bancor-animation/)
