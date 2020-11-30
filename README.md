@@ -1,4 +1,4 @@
-# CSS | Bancor animation
+# CSS - Bancor animation
 
 ##### text "Bancor" with a short animation applying just CSS code
 
